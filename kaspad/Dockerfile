@@ -2,6 +2,8 @@ FROM ubuntu:latest
 
 ENV KASPA_VERSION=v0.13.0
 
+WORKDIR /kaspa
+
 RUN apt-get update -y
 RUN apt-get install -y wget curl unzip vim
 
