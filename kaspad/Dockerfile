@@ -15,6 +15,9 @@ RUN cp ./bin/* /usr/bin/
 COPY scripts/*.bash /scripts/
 
 RUN useradd -r kaspa
+RUN mkdir /home/kaspa/.rusty-kaspa
+RUN chown kaspa:kaspa /home/kaspa/.rusty-kaspa
+
 USER kaspa
 
 CMD ["/scripts/start.bash"]
