@@ -8,6 +8,8 @@ services:
     build:
       context: .
       dockerfile: kaspad/Dockerfile
+    volumes:
+      - kaspad_data:/home/kaspa/.rusty-kaspa
     #environment:
     #  - 'DB_HOST=postgresql'
     #  - 'DB_USER=demo'

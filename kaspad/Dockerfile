@@ -13,5 +13,6 @@ RUN ls -al ./bin
 RUN cp ./bin/* /usr/bin/
 
 COPY scripts/*.bash /scripts/
+USER kaspa
 
 CMD ["/scripts/start.bash"]
