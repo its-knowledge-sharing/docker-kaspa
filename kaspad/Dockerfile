@@ -13,6 +13,8 @@ RUN ls -al ./bin
 RUN cp ./bin/* /usr/bin/
 
 COPY scripts/*.bash /scripts/
+
+RUN useradd -r sathya
 USER kaspa
 
 CMD ["/scripts/start.bash"]
