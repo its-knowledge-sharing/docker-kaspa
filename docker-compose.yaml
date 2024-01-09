@@ -1,0 +1,15 @@
+version: '3'
+volumes:
+  kaspad_data: {}
+services:
+  kaspad:
+    hostname: kaspad
+    restart: always
+    build:
+      context: .
+      dockerfile: kaspad/Dockerfile
+    #environment:
+    #  - 'DB_HOST=postgresql'
+    #  - 'DB_USER=demo'
+    #  - 'DB_PASSWORD=123'
+    #  - 'DB_NAME=testdb'
