@@ -21,3 +21,7 @@ services:
       - 16111:16111 # mainnet
       - 16211:16211 # testnet
       - 16311:16311 # testnet-11
+      # WS connection
+      - 17110:17110 # mainnet
+      - 17210:17210 # testnet
+      - 17310:17310 # testnet-11
