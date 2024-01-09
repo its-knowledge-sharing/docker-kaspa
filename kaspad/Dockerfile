@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-ENV KASPA_VERSION=v0.13.0
+ENV KASPA_VERSION=v0.13.3
 
 WORKDIR /kaspa
 
