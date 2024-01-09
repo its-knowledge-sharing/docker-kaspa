@@ -12,3 +12,7 @@ services:
       - kaspad_data:/home/kaspa/.rusty-kaspa
     environment:
       - 'RUST_BACKTRACE=1'
+    ports:
+      - 16111:16111 # mainnet
+      - 16211:16211 # testnet
+      - 16311:16311 # testnet-11
