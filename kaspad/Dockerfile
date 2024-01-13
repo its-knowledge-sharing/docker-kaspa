@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-ENV KASPA_VERSION=v0.13.0
+ENV KASPA_VERSION=v0.13.3
 
 WORKDIR /kaspa
 
@@ -13,5 +13,11 @@ RUN ls -al ./bin
 RUN cp ./bin/* /usr/bin/
 
 COPY scripts/*.bash /scripts/
+
+RUN useradd -r kaspa
+RUN mkdir -p /home/kaspa/.rusty-kaspa
+RUN chown kaspa:kaspa /home/kaspa/.rusty-kaspa
+
+USER kaspa
 
 CMD ["/scripts/start.bash"]

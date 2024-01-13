@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kaspad
+kaspad --utxoindex --rpclisten-borsh=public --yes

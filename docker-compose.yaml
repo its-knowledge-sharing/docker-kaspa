@@ -1,0 +1,27 @@
+version: '3'
+volumes:
+  kaspad_data: {}
+services:
+  kaspad:
+    hostname: kaspad
+    restart: always
+    build:
+      context: .
+      dockerfile: kaspad/Dockerfile
+    volumes:
+      - kaspad_data:/home/kaspa/.rusty-kaspa
+    environment:
+      - 'RUST_BACKTRACE=1'
+    ports:
+      # gRPC connection
+      - 16110:16110 # mainnet
+      - 16210:16210 # testnet
+      - 16310:16310 # testnet-11
+      # P2P connection
+      - 16111:16111 # mainnet
+      - 16211:16211 # testnet
+      - 16311:16311 # testnet-11
+      # WS connection
+      - 17110:17110 # mainnet
+      - 17210:17210 # testnet
+      - 17310:17310 # testnet-11
