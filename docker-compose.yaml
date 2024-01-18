@@ -9,7 +9,7 @@ services:
       context: .
       dockerfile: kaspad/Dockerfile
     volumes:
-      - kaspad_data:/home/kaspa/.rusty-kaspa
+      - /home/devops/kaspa-data:/home/kaspa/.rusty-kaspa
     environment:
       - 'RUST_BACKTRACE=1'
     ports:
